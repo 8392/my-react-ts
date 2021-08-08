@@ -1,25 +1,21 @@
-import React from 'react';
-import logo from 'logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+// import SearchPanel from 'page/SearchPanel'
+import TestFn from 'page/TestFn'
+// import UseMemo from 'page/UseMemo'
 
 function App() {
+  const [flag, setFlag] = useState(true)
+
+  const handleBtn =() => {
+    setFlag(!flag)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <SearchPanel /> */}
+      <button onClick={handleBtn}>测试销毁组件</button>
+      {flag && <TestFn />}
+      {/* <UseMemo /> */}
+    </>
   );
 }
 
