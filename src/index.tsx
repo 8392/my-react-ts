@@ -3,12 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-<<<<<<< HEAD
 console.log(999)
 
-=======
-console.log(2222)
->>>>>>> login
 ReactDOM.render(
   <React.StrictMode>
      <App />
